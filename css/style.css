@@ -187,3 +187,14 @@ section.bg-soft.section-space { padding: 3rem 0; margin: 3rem 0; }
   border-color: var(--primary-color, #0d6efd);
   box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
 }
+
+/* Smaller heading banner on phones */
+@media (max-width: 576px) {
+  .page-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .register-card {
+    padding: 1.5rem !important;
+  }
+}
