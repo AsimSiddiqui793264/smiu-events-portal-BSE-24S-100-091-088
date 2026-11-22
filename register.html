@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Register | SMIU Events Portal</title>
-  <!-- Bootstrap 5.3.3 CSS -->
+
+  <!-- Bootstrap 5.3.3 CSS (CDN) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
@@ -12,41 +13,183 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-  <!-- ===== NAVBAR (same on every page) ===== -->
+
+  <!-- ===== NAVBAR (placeholder: replace with Asim's final navbar) ===== -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark site-navbar fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-calendar-event me-2"></i>SMIU Events</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="index.html">SMIU Events</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mainNav" aria-controls="mainNav"
+                aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="mainNav">
           <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
-          <li class="nav-item"><a class="nav-link" href="societies.html">Societies</a></li>
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="register.html">Register</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="societies.html">Societies</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="register.html">Register</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
 
-  <main class="container section-space">
-    <!-- TODO: build the Register page here (see assignment guide) -->
-    <h1 class="section-title">Register</h1>
+  <main>
+
+    <!-- ===== PAGE HEADING ===== -->
+    <section class="page-header text-center text-white py-5">
+      <div class="container">
+        <h1 class="fw-bold">Event Registration</h1>
+        <p class="lead mb-0">Fill in the form below to reserve your seat.</p>
+      </div>
+    </section>
+
+    <!-- ===== REGISTRATION FORM ===== -->
+    <section class="section-space">
+      <div class="container">
+        <div class="register-card card p-4 p-md-5">
+          <form action="#" method="post">
+            <div class="row g-3">
+
+              <!-- Full name -->
+              <div class="col-12 col-md-6">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="fullName"
+                       placeholder="e.g. Muhammad Aqib" required>
+              </div>
+
+              <!-- Roll number -->
+              <div class="col-12 col-md-6">
+                <label for="rollNo" class="form-label">Roll Number</label>
+                <input type="text" class="form-control" id="rollNo"
+                       placeholder="e.g. BSE-24S-091" required>
+              </div>
+
+              <!-- Email -->
+              <div class="col-12 col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email"
+                       placeholder="name@example.com" required>
+              </div>
+
+              <!-- Phone -->
+              <div class="col-12 col-md-6">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone"
+                       placeholder="03XX-XXXXXXX" required>
+              </div>
+
+              <!-- Department -->
+              <div class="col-12 col-md-6">
+                <label for="department" class="form-label">Department</label>
+                <select class="form-select" id="department" required>
+                  <option value="" selected disabled>Choose department...</option>
+                  <option>Software Engineering</option>
+                  <option>Computer Science</option>
+                  <option>Business Administration</option>
+                  <option>Electrical Engineering</option>
+                  <option>Education</option>
+                </select>
+              </div>
+
+              <!-- Event -->
+              <div class="col-12 col-md-6">
+                <label for="eventSelect" class="form-label">Event</label>
+                <select class="form-select" id="eventSelect" required>
+                  <option value="" selected disabled>Choose event...</option>
+                  <option>Tech Fest 2026</option>
+                  <option>Career Fair</option>
+                  <option>Sports Gala</option>
+                  <option>Debate Championship</option>
+                  <option>Photography Walk</option>
+                </select>
+              </div>
+
+              <!-- Year (radio buttons) -->
+              <div class="col-12 col-md-6">
+                <span class="form-label d-block">Year of Study</span>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="year" id="year1" value="1" required>
+                  <label class="form-check-label" for="year1">1st</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="year" id="year2" value="2">
+                  <label class="form-check-label" for="year2">2nd</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="year" id="year3" value="3">
+                  <label class="form-check-label" for="year3">3rd</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="year" id="year4" value="4">
+                  <label class="form-check-label" for="year4">4th</label>
+                </div>
+              </div>
+
+              <!-- Interests (checkboxes) -->
+              <div class="col-12 col-md-6">
+                <span class="form-label d-block">Interests</span>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="intTech" value="tech">
+                  <label class="form-check-label" for="intTech">Tech</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="intSports" value="sports">
+                  <label class="form-check-label" for="intSports">Sports</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="intArts" value="arts">
+                  <label class="form-check-label" for="intArts">Arts</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="intDebate" value="debate">
+                  <label class="form-check-label" for="intDebate">Debate</label>
+                </div>
+              </div>
+
+              <!-- Message -->
+              <div class="col-12">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="4"
+                          placeholder="Anything you would like to tell us?"></textarea>
+              </div>
+
+              <!-- Terms -->
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="terms" required>
+                  <label class="form-check-label" for="terms">
+                    I agree to the terms and conditions of the event.
+                  </label>
+                </div>
+              </div>
+
+              <!-- Submit -->
+              <div class="col-12 text-center">
+                <button type="submit" class="btn btn-theme btn-lg px-5">
+                  <i class="bi bi-check-circle me-2"></i>Register
+                </button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- ===== FOOTER (same on every page) ===== -->
-  <footer class="site-footer py-4 mt-5">
-    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
-      <span>&copy; 2026 SMIU Events Portal. Sindh Madressatul Islam University, Karachi.</span>
-      <span><i class="bi bi-envelope me-1"></i>studentaffairs@smiu.edu.pk</span>
+  <!-- ===== FOOTER (placeholder: replace with Asim's final footer) ===== -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p class="mb-0">&copy; 2026 SMIU Events Portal. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Bootstrap 5.3.3 JS bundle (before </body>) -->
+  <!-- Bootstrap 5.3.3 bundle JS (before closing body) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
