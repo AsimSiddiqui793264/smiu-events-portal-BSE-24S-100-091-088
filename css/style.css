@@ -57,32 +57,21 @@ section.bg-soft.section-space { padding: 3rem 0; margin: 3rem 0; }
 }
 /* =====================================================
    SOCIETIES & REGISTER PAGES (Muhammad Aqib)
+   Uses the shared theme variables from :root above
    ===================================================== */
 
-/* Page heading banner with gradient */
-.page-header {
-  background: linear-gradient(135deg, var(--primary-color, #0d6efd), var(--secondary-color, #6610f2));
-}
-
-/* Spacing between sections */
-.section-space {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  padding: 1.5rem 0;
-}
-
-/* Society card with hover effect */
+/* Society card with hover effect (box-shadow + transform) */
 .society-card {
   border: none;
-  border-radius: 12px;
+  border-radius: var(--radius);
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .society-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 /* Society image */
@@ -97,103 +86,26 @@ section.bg-soft.section-space { padding: 3rem 0; margin: 3rem 0; }
   font-size: 0.85rem;
   padding: 0.5em 0.9em;
   border-radius: 50px;
-}
-
-/* Custom theme button */
-.btn-theme {
-  background-color: var(--primary-color, #0d6efd);
+  background-color: var(--primary);
   color: #fff;
-  border: none;
-  border-radius: 50px;
-  padding: 0.5rem 1.5rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.btn-theme:hover {
-  background-color: var(--secondary-color, #6610f2);
-  color: #fff;
-  transform: scale(1.05);
-}
-
-/* =====================================================
-   SOCIETIES & REGISTER PAGES (Muhammad Aqib)
-   ===================================================== */
-
-/* Page heading banner with gradient */
-.page-header {
-  background: linear-gradient(135deg, var(--primary-color, #0d6efd), var(--secondary-color, #6610f2));
-}
-
-/* Spacing between sections */
-.section-space {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  padding: 1.5rem 0;
-}
-
-/* Society card with hover effect */
-.society-card {
-  border: none;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.society-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-}
-
-/* Society image */
-.society-card .card-img-top {
-  height: 200px;
-  object-fit: cover;
-}
-
-/* Member count badge */
-.member-badge {
-  align-self: flex-start;
-  font-size: 0.85rem;
-  padding: 0.5em 0.9em;
-  border-radius: 50px;
-}
-
-/* Custom theme button */
-.btn-theme {
-  background-color: var(--primary-color, #0d6efd);
-  color: #fff;
-  border: none;
-  border-radius: 50px;
-  padding: 0.5rem 1.5rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn-theme:hover {
-  background-color: var(--secondary-color, #6610f2);
-  color: #fff;
-  transform: scale(1.05);
-}
 /* Registration form card */
 .register-card {
   border: none;
-  border-radius: 16px;
+  border-radius: var(--radius);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
 }
 
 /* Highlight form fields when clicked */
 .register-card .form-control:focus,
 .register-card .form-select:focus {
-  border-color: var(--primary-color, #0d6efd);
-  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(22, 64, 122, 0.25);
 }
 
-/* Smaller heading banner on phones */
+/* Smaller form padding on phones */
 @media (max-width: 576px) {
-  .page-header h1 {
-    font-size: 1.75rem;
-  }
-
   .register-card {
     padding: 1.5rem !important;
   }
