@@ -55,3 +55,58 @@ section.bg-soft.section-space { padding: 3rem 0; margin: 3rem 0; }
   .carousel-img { height: 240px; }
   .hero { min-height: 60vh; }
 }
+/* =====================================================
+   SOCIETIES & REGISTER PAGES (Muhammad Aqib)
+   Uses the shared theme variables from :root above
+   ===================================================== */
+
+/* Society card with hover effect (box-shadow + transform) */
+.society-card {
+  border: none;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.society-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Society image */
+.society-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Member count badge */
+.member-badge {
+  align-self: flex-start;
+  font-size: 0.85rem;
+  padding: 0.5em 0.9em;
+  border-radius: 50px;
+  background-color: var(--primary);
+  color: #fff;
+}
+
+/* Registration form card */
+.register-card {
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Highlight form fields when clicked */
+.register-card .form-control:focus,
+.register-card .form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(22, 64, 122, 0.25);
+}
+
+/* Smaller form padding on phones */
+@media (max-width: 576px) {
+  .register-card {
+    padding: 1.5rem !important;
+  }
+}
