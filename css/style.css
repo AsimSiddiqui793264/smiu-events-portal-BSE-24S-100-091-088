@@ -1,1 +1,57 @@
-/* SMIU Events Portal - shared styles */
+/* ===== THEME COLOURS (CSS variables) ===== */
+:root {
+  --primary: #16407a;
+  --primary-dark: #0e2a52;
+  --accent: #f2a31b;
+  --soft-bg: #eef3f9;
+  --text: #1f2937;
+  --radius: 0.75rem;
+}
+
+/* 1. Base page */
+body { color: var(--text); padding-top: 70px; font-family: "Segoe UI", system-ui, sans-serif; }
+
+/* 2. Navbar */
+.site-navbar { background-color: var(--primary-dark); }
+.site-navbar .nav-link.active { color: var(--accent); font-weight: 600; }
+
+/* 3. Gradient hero */
+.hero { min-height: 70vh; background: linear-gradient(135deg, var(--primary-dark), var(--primary) 60%, #2b6cb0); }
+.hero-text { max-width: 36rem; margin-bottom: 1.5rem; }
+
+/* 4. Custom accent button */
+.btn-accent { background-color: var(--accent); color: #1a1a1a; border: none; font-weight: 600; }
+.btn-accent:hover { background-color: #d98f10; color: #000; }
+
+/* 5. Accent badge */
+.bg-accent { background-color: var(--accent) !important; color: #1a1a1a; }
+
+/* 6. Section spacing */
+.section-space { margin-top: 3rem; margin-bottom: 3rem; padding-top: 1rem; padding-bottom: 1rem; }
+section.bg-soft.section-space { padding: 3rem 0; margin: 3rem 0; }
+
+/* 7. Section title with underline */
+.section-title { font-weight: 700; color: var(--primary-dark); margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 3px solid var(--accent); display: inline-block; }
+
+/* 8. Soft background section */
+.bg-soft { background-color: var(--soft-bg); }
+
+/* 9. Card hover effect (box-shadow + transform) */
+.event-card { border: none; border-radius: var(--radius); overflow: hidden; transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.event-card:hover { transform: translateY(-6px); box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); }
+
+/* 10. Carousel images */
+.carousel-img { height: 420px; object-fit: cover; }
+.carousel-caption { background: rgba(14, 42, 82, 0.65); border-radius: var(--radius); }
+
+/* 11. Feature icons */
+.feature-icon { font-size: 2.5rem; color: var(--primary); }
+
+/* 12. Footer */
+.site-footer { background-color: var(--primary-dark); color: #dbe4f0; }
+
+/* 13. Phone adjustments */
+@media (max-width: 576px) {
+  .carousel-img { height: 240px; }
+  .hero { min-height: 60vh; }
+}
