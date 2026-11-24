@@ -161,3 +161,13 @@ section.bg-soft.section-space { padding: 3rem 0; margin: 3rem 0; }
   border-radius: 50%;
   border: 4px solid var(--accent);
 }
+
+/* Let long role text wrap inside the team card on small screens */
+.team-card .badge { white-space: normal; line-height: 1.4; }
+
+/* Smaller team photos on phones */
+@media (max-width: 576px) {
+  .team-photo { width: 100px; height: 100px; }
+  .contact-card .card-body { padding: 1.25rem !important; }
+}
+
