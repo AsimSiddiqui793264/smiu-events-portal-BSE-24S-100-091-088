@@ -34,19 +34,140 @@
   </header>
 
   <main class="container section-space">
-    <!-- TODO: build the Contact page here (see assignment guide) -->
-    <h1 class="section-title">Contact</h1>
-  </main>
 
-  <!-- ===== FOOTER (same on every page) ===== -->
-  <footer class="site-footer py-4 mt-5">
-    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
-      <span>&copy; 2026 SMIU Events Portal. Sindh Madressatul Islam University, Karachi.</span>
-      <span><i class="bi bi-envelope me-1"></i>studentaffairs@smiu.edu.pk</span>
-    </div>
-  </footer>
+    <!-- ===== PAGE HEADING ===== -->
+    <section aria-labelledby="contact-h">
+      <h1 id="contact-h" class="section-title">Contact Us</h1>
+      <p class="lead contact-intro">Questions about an event, a society or your registration? Send us a message and the Student Affairs Office will reply.</p>
+    </section>
 
-  <!-- Bootstrap 5.3.3 JS bundle (before </body>) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+    <!-- ===== CONTACT FORM + OFFICE DETAILS ===== -->
+    <section class="mt-4" aria-labelledby="form-h">
+      <div class="row g-4">
+
+        <!-- Contact form (full width on phone, 7 of 12 columns on desktop) -->
+        <div class="col-12 col-lg-7">
+          <div class="card contact-card h-100">
+            <div class="card-body p-4">
+              <h2 id="form-h" class="h4 mb-3">Send us a message</h2>
+
+              <!-- Success alert (hidden until the form is sent) -->
+              <div id="contactSuccess" class="alert alert-success d-none" role="alert">
+                <i class="bi bi-check-circle me-1"></i>Thank you! Your message has been sent.
+              </div>
+
+              <form id="contactForm">
+                <div class="mb-3">
+                  <label for="contactName" class="form-label">Full name</label>
+                  <input type="text" class="form-control" id="contactName" placeholder="e.g. Ali Khan" required>
+                </div>
+                <div class="mb-3">
+                  <label for="contactEmail" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="contactEmail" placeholder="name@example.com" required>
+                </div>
+                <div class="mb-3">
+                  <label for="contactSubject" class="form-label">Subject</label>
+                  <select class="form-select" id="contactSubject" required>
+                    <option value="" selected disabled>Choose a subject</option>
+                    <option>Event question</option>
+                    <option>Society membership</option>
+                    <option>Registration problem</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="contactMessage" class="form-label">Message</label>
+                  <textarea class="form-control" id="contactMessage" rows="5" placeholder="Write your message here" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-accent btn-lg w-100">Send message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Office details + map placeholder -->
+        <div class="col-12 col-lg-5">
+          <div class="card contact-card mb-4">
+            <div class="card-body p-4">
+              <h2 class="h4 mb-3">Office details</h2>
+              <ul class="list-unstyled contact-info mb-0">
+                <li class="d-flex mb-3">
+                  <i class="bi bi-geo-alt-fill contact-icon me-3"></i>
+                  <span>Student Affairs Office, Sindh Madressatul Islam University, Aiwan-e-Tijarat Road, Near Habib Bank Plaza, Karachi 74000</span>
+                  <i class="bi bi-envelope-fill contact-icon me-3"></i>
+                  <a href="mailto:studentaffairs@smiu.edu.pk">studentaffairs@smiu.edu.pk</a>
+                </li>
+                <li class="d-flex mb-3">
+                  <i class="bi bi-telephone-fill contact-icon me-3"></i>
+                  <span>+92 31 222 55606</span>
+                </li>
+                <li class="d-flex">
+                  <i class="bi bi-clock-fill contact-icon me-3"></i>
+                  <span>Monday to Friday, 9:00 AM to 4:00 PM</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Map placeholder image -->
+          <img src="https://picsum.photos/seed/smiumap/800/450" class="img-fluid rounded-3 contact-map" alt="Map placeholder showing the SMIU campus location">
+        </div>
+
+      </div>
+    </section>
+
+        <!-- ===== MEET THE TEAM ===== -->
+    <section class="mt-5" aria-labelledby="team-h">
+      <h2 id="team-h" class="section-title">Meet the Team</h2>
+      <div class="row g-4 team-row">
+
+        <!-- Member 1: Team Lead -->
+        <div class="col-12 col-md-6">
+          <div class="card team-card h-100 text-center">
+            <div class="card-body">
+              <img src="images/asim.jpg" class="team-photo mb-3" alt="Photo of Asim Siddiqui">
+              <h3 class="h5 mb-1">Asim Siddiqui</h3>
+              <p class="text-muted mb-1">Roll No: BSE-24S-100</p>
+              <span class="badge bg-accent">Team Lead, Navbar and Home page</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 2: Societies and Register -->
+        <div class="col-12 col-md-6">
+          <div class="card team-card h-100 text-center">
+            <div class="card-body">
+              <img src="images/aqib.jpg" class="team-photo mb-3" alt="Photo of Muhammad Aqib">
+              <h3 class="h5 mb-1">Muhammad Aqib</h3>
+              <p class="text-muted mb-1">Roll No: BSE-24S-063</p>
+              <span class="badge bg-accent">Societies and Register pages</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 3: Events and Event Details -->
+        <div class="col-12 col-md-6">
+          <div class="card team-card h-100 text-center">
+            <div class="card-body">
+              <img src="images/karan.jpg" class="team-photo mb-3" alt="Photo of Karan Kumar">
+              <h3 class="h5 mb-1">Karan Kumar</h3>
+              <p class="text-muted mb-1">Roll No: BSE-24S-088</p>
+              <span class="badge bg-accent">Events and Event Details pages</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 4: Contact page and Testing -->
+        <div class="col-12 col-md-6">
+          <div class="card team-card h-100 text-center">
+            <div class="card-body">
+              <img src="images/saad.jpg" class="team-photo mb-3" alt="Photo of Muhammad Saad">
+              <h3 class="h5 mb-1">Muhammad Saad</h3>
+              <p class="text-muted mb-1">Roll No: BSE-24S-091</p>
+              <span class="badge bg-accent">Contact page, Testing</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
